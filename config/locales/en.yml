@@ -782,8 +782,16 @@ en:
     title: "%{instance} Terms of Service and Privacy Policy"
   themes:
     contrast: High contrast
-    default: Mastodon
+    default: Qoto Default Theme (light)
+    mastodon: Mastodon Default Theme (dark)
     mastodon-light: Mastodon (light)
+    blue: The Blue Theme (light)
+    mastoblue: The Masto Blue Theme (light)
+    material-light: Material Theme (light)
+    material-dark: Material Theme (dark)
+    material-tweaked: Material Theme - Tweaked (light)
+    mastodon-wide-light: Mastodon Default Theme, Full Width (light)
+    mastodon-wide-dark: Mastodon Default Theme, Full Width (dark)
   time:
     formats:
       default: "%b %d, %Y, %H:%M"
