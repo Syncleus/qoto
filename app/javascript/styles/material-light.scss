@@ -58,7 +58,6 @@ top: inherit;
 .next_page,
 .footer,
 .footer a,
-.form-footer a,
 input.file .block-button {
 color: #fff!important;
 }
@@ -92,8 +91,6 @@ margin-left: 6px;
 .notification-bar-message,
 .notification-bar-title,
 .follow-prompt,
-.about-body div,
-.about-body a,
 .pagination .prev,
 .pagination .next {
 color: #FFF!important;
@@ -141,8 +138,7 @@ background-color: #2b90d9!important;
 .admin-wrapper .sidebar-wrapper ul ul {
 background-color: #fff!important;
 }
-.form-footer [href*="/settings/preferences"],
-.about-body a {
+.form-footer [href*="/settings/preferences"] {
 background: none!important;
 }
 input.search__input,
