@@ -52,15 +52,6 @@ border-bottom: none!important;
 bottom: 4px;
 top: inherit;
 }
-.counter-label,
-.bio .account__header__content,
-.bio .account__header__content .ellipsis,
-.next_page,
-.footer,
-.footer a,
-input.file .block-button {
-color: #fff!important;
-}
 .admin-wrapper .simple_form {
 background: #f0f0f0;
 border-radius: 5px;
@@ -305,3 +296,6 @@ div.ui
   overflow-y: hidden;
 }
 
+.account__header__content {
+  background: unset!important;
+}
