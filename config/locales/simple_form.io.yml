@@ -7,7 +7,7 @@ io:
         display_name: 30 signi maxime
         header: En la formato PNG, GIF o JPG. Til 2Mo. Esos mikrigita a 700x335px
         locked: Tu devos aprobar omna demandi di sequado, e tua mesaji esos senchanje nur por tua sequanti.
-        note: 160 signi maxime
+        note: 65535 signi maxime
       imports:
         data: Dosiero CSV de altra instaluro di Mastodon
       sessions:
