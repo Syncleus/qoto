@@ -20,7 +20,7 @@ zh-CN:
       humane_approach_title: 更加以人为本
       not_a_product_body: Mastodon 绝非一个商业网络。这里既没有广告，也没有数据挖掘，更没有围墙花园。中心机构在这里不复存在。
       not_a_product_title: 作为用户，你并非一件商品
-      real_conversation_body: Mastodon 有着高达 500 字的字数限制，以及对内容的细化控制和媒体警告提示的支持，只为让你能够畅所欲言。
+      real_conversation_body: Mastodon 有着高达 65535 字的字数限制，以及对内容的细化控制和媒体警告提示的支持，只为让你能够畅所欲言。
       real_conversation_title: 为真正的交流而生
       within_reach_body: 通过一个面向开发者友好的 API 生态系统，Mastodon 让你可以随时随地通过众多 iOS、Android 以及其他平台的应用与朋友们保持联系。
       within_reach_title: 始终触手可及

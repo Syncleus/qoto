@@ -20,7 +20,7 @@ fi:
       humane_approach_title: Ihmisläheisempi ote
       not_a_product_body: Mastodon ei ole kaupallinen verkosto. Ei mainoksia, ei tiedonlouhintaa, ei suljettuja protokollia. Mastodonissa ei ole keskusjohtoa.
       not_a_product_title: Olet henkilö, et tuote
-      real_conversation_body: 'Voit ilmaista itseäsi niin kuin itse haluat: tilaa on 500 merkkiä, ja sisältövaroituksia voi tehdä monin tavoin.'
+      real_conversation_body: 'Voit ilmaista itseäsi niin kuin itse haluat: tilaa on 65535 merkkiä, ja sisältövaroituksia voi tehdä monin tavoin.'
       real_conversation_title: Tehty oikeaa keskustelua varten
       within_reach_body: Rajapintoja on tarjolla moniin eri kehitysympäristöihin, minkä ansiosta iOS:lle, Androidille ja muille alustoille on saatavana useita eri sovelluksia. Näin voit pitää yhteyttä ystäviisi missä vain.
       within_reach_title: Aina lähellä

@@ -20,7 +20,7 @@ zh-HK:
       humane_approach_title: 以人為本
       not_a_product_body: Mastodon 不是商業網絡。沒有廣告，沒有數據挖掘，也沒有中央機構操控。平台完全開放。
       not_a_product_title: 你是用戶，不是商品
-      real_conversation_body: Mastodon 的字數限制高達 500 字，並支援仔細的媒體警告選項，令你暢所欲言。
+      real_conversation_body: Mastodon 的字數限制高達 65535 字，並支援仔細的媒體警告選項，令你暢所欲言。
       real_conversation_title: 為真正的交流而生
       within_reach_body: 簡易的 API 系統，令用戶可以透過不同的 iOS、Android 及其他平台的應用軟件，與朋友保持聯繫。
       within_reach_title: 無處不在

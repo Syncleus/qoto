@@ -20,7 +20,7 @@ gl:
       humane_approach_title: Unha aproximación máis humana
       not_a_product_body: Mastodon non é unha rede comercial. Sen anuncios, sen minería de datos, sen xardíns privados. Non hai autoridade centralizada.
       not_a_product_title: Vostede é unha persoa, non un producto
-      real_conversation_body: Con 500 caracteres a súa disposición, soporte para contido polo miúdo e avisos sobre o contido, pode expresarse vostede con libertade.
+      real_conversation_body: Con 65535 caracteres a súa disposición, soporte para contido polo miúdo e avisos sobre o contido, pode expresarse vostede con libertade.
       real_conversation_title: Construído para conversacións reais
       within_reach_body: Existen múltiples aplicativos para iOS, Android e outras plataformas grazas a un entorno API amigable para o desenvolvedor que lle permite estar ao tanto cos seus amigos en calquer lugar.
       within_reach_title: Sempre en contacto

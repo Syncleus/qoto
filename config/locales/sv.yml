@@ -20,7 +20,7 @@ sv:
       humane_approach_title: En mer human inställning
       not_a_product_body: Mastodon är inte ett kommersiellt nätverk. Ingen reklam, ingen datautvinning, inga muromgärdade trädgårdar. Det finns ingen central myndighet.
       not_a_product_title: Du är en person, inte en produkt
-      real_conversation_body: Med 500 tecken till ditt förfogande och stöd för granulärt innehåll och mediavarningar så kan du uttrycka dig själv, som du vill.
+      real_conversation_body: Med 65535 tecken till ditt förfogande och stöd för granulärt innehåll och mediavarningar så kan du uttrycka dig själv, som du vill.
       real_conversation_title: Byggd för riktiga konversationer
       within_reach_body: Flera appar för iOS, Android och andra plattformar tack vare ett utvecklingsvänligt API-ekosystem gör att du kan hålla kontakten med dina vänner var som helst.
       within_reach_title: Alltid inom räckhåll

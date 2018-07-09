@@ -20,7 +20,7 @@ it:
       humane_approach_title: Un approccio più umano
       not_a_product_body: Mastodon non è una rete commerciale. Niente pubblicità, niente data mining, nessun giardino murato. Non c'è nessuna autorità centrale.
       not_a_product_title: Tu sei una persona, non un prodotto
-      real_conversation_body: Con 500 caratteri a disposizione, un supporto per i contenuti granulari ed avvisi sui media potrai esprimerti nel modo desiderato.
+      real_conversation_body: Con 65535 caratteri a disposizione, un supporto per i contenuti granulari ed avvisi sui media potrai esprimerti nel modo desiderato.
       real_conversation_title: Creato per conversazioni reali
       within_reach_body: Apps per iOS, Android ed altre piattaforme, realizzate grazie ad un ecosistema di API adatto agli sviluppatori, ti consentono di poter stare ovunque al passo con i tuoi amici.
       within_reach_title: Sempre a portata di mano

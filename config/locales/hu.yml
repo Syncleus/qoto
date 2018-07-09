@@ -19,7 +19,7 @@ hu:
       humane_approach_title: Emberséges attitűd
       not_a_product_body: A Mastodon nem a profitszerzésre épül, nem is privát játszótér. Nincsenek reklámok, nincs adatbányászat és központosított döntéshozatal sincsen.
       not_a_product_title: Ember vagy, nem pedig árucikk
-      real_conversation_body: Az 500 karakteres limit, az érzékeny tartalomként jelölés és más kifinomult eszközök segítségével tényleg egyedi módon fejezheted ki önmagad.
+      real_conversation_body: Az 65535 karakteres limit, az érzékeny tartalomként jelölés és más kifinomult eszközök segítségével tényleg egyedi módon fejezheted ki önmagad.
       real_conversation_title: Valódi beszélgetésekre tervezve
       within_reach_body: A fejlesztőbarát API-nak köszönhetően számos iOS, Android és egyéb platformra írt alkalmazás teszi lehetővé, hogy bármikor, bárhonnan részt vehess a társalgásban.
       within_reach_title: Mindig elérhetőnek lenni
