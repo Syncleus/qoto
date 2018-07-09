@@ -22,3 +22,9 @@
 @import 'mastodon/tables';
 @import 'mastodon/admin';
 @import 'mastodon/rtl';
+
+.MathJax, .MathJax_Display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+

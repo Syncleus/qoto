@@ -1,3 +1,7 @@
+div.column {
+  flex-grow: 1;
+}
+
 @import 'application';
 
 .emojione {
@@ -298,5 +302,10 @@ div.columns-area
 div.ui
 {
     background-color: #FFF;
+}
+
+.MathJax, .MathJax_Display {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 

@@ -6,6 +6,5 @@ blue: styles/blue.scss
 mastoblue: styles/mastoblue.scss
 material-light: styles/material-light.scss
 material-dark: styles/material-dark.scss
-materials-tweaked: styles/material-tweaked.scss
 mastodon-wide-light: styles/mastodon-wide-light.scss
 mastodon-wide-dark: styles/mastodon-wide-dark.scss

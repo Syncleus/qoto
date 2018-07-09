@@ -1,20 +1,11 @@
+div.column {
+  flex-grow: 1;
+}
+
 @import 'application';
 
-.column
-{
-  min-width: 300px;
-  width: 35%;
-}
-
-.column:nth-last-child(2)
-{
-  order: 1;
-}
-
-.drawer,
-  .column:nth-last-child(2)
-{
-  min-width: 250px;
-  width: 15%;
+.MathJax, .MathJax_Display {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 

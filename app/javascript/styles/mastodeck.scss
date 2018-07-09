@@ -524,3 +524,9 @@
     background: #2b7bb9;
     border: 1px solid #2b7bb9;
   }
+
+.MathJax, .MathJax_Display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+

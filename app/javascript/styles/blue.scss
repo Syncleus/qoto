@@ -678,3 +678,9 @@ body.admin
 {
   background: rgba(0,0,0,0);
 }
+
+.MathJax, .MathJax_Display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
