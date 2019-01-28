@@ -22,6 +22,8 @@ export default class Header extends ImmutablePureComponent {
     onMute: PropTypes.func.isRequired,
     onBlockDomain: PropTypes.func.isRequired,
     onUnblockDomain: PropTypes.func.isRequired,
+    onEndorseToggle: PropTypes.func.isRequired,
+    onAddToList: PropTypes.func.isRequired,
     hideTabs: PropTypes.bool,
   };
 
@@ -73,6 +75,14 @@ export default class Header extends ImmutablePureComponent {
     this.props.onUnblockDomain(domain);
   }
 
+  handleEndorseToggle = () => {
+    this.props.onEndorseToggle(this.props.account);
+  }
+
+  handleAddToList = () => {
+    this.props.onAddToList(this.props.account);
+  }
+
   render () {
     const { account, hideTabs } = this.props;
 
@@ -100,6 +110,8 @@ export default class Header extends ImmutablePureComponent {
           onMute={this.handleMute}
           onBlockDomain={this.handleBlockDomain}
           onUnblockDomain={this.handleUnblockDomain}
+          onEndorseToggle={this.handleEndorseToggle}
+          onAddToList={this.handleAddToList}
         />
 
         {!hideTabs && (

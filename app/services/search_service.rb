@@ -34,6 +34,8 @@ class SearchService < BaseService
                             .compact
 
     statuses.reject { |status| StatusFilter.new(status, account).filtered? }
+  rescue Faraday::ConnectionFailed
+    []
   end
 
   def perform_hashtags_search!
@@ -53,7 +55,7 @@ class SearchService < BaseService
   end
 
   def url_resource
-    @_url_resource ||= ResolveURLService.new.call(query)
+    @_url_resource ||= ResolveURLService.new.call(query, on_behalf_of: @account)
   end
 
   def url_resource_symbol

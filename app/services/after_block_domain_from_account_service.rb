@@ -15,13 +15,13 @@ class AfterBlockDomainFromAccountService < BaseService
   private
 
   def reject_existing_followers!
-    @account.passive_relationships.where(account: Account.where(domain: @domain)).includes(:account).find_each do |follow|
+    @account.passive_relationships.where(account: Account.where(domain: @domain)).includes(:account).reorder(nil).find_each do |follow|
       reject_follow!(follow)
     end
   end
 
   def reject_pending_follow_requests!
-    FollowRequest.where(target_account: @account).where(account: Account.where(domain: @domain)).includes(:account).find_each do |follow_request|
+    FollowRequest.where(target_account: @account).where(account: Account.where(domain: @domain)).includes(:account).reorder(nil).find_each do |follow_request|
       reject_follow!(follow_request)
     end
   end
@@ -31,11 +31,11 @@ class AfterBlockDomainFromAccountService < BaseService
 
     return unless follow.account.activitypub?
 
-    json = Oj.dump(ActivityPub::LinkedDataSignature.new(ActiveModelSerializers::SerializableResource.new(
+    json = ActiveModelSerializers::SerializableResource.new(
       follow,
       serializer: ActivityPub::RejectFollowSerializer,
       adapter: ActivityPub::Adapter
-    ).as_json).sign!(@account))
+    ).to_json
 
     ActivityPub::DeliveryWorker.perform_async(json, @account.id, follow.account.inbox_url)
   end

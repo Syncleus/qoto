@@ -24,7 +24,7 @@ class Notification < ApplicationRecord
     favourite:      'Favourite',
   }.freeze
 
-  STATUS_INCLUDES = [:account, :application, :stream_entry, :media_attachments, :tags, mentions: :account, reblog: [:stream_entry, :account, :application, :media_attachments, :tags, mentions: :account]].freeze
+  STATUS_INCLUDES = [:account, :application, :media_attachments, :tags, active_mentions: :account, reblog: [:account, :application, :media_attachments, :tags, active_mentions: :account]].freeze
 
   belongs_to :account, optional: true
   belongs_to :from_account, class_name: 'Account', optional: true
@@ -38,8 +38,6 @@ class Notification < ApplicationRecord
 
   validates :account_id, uniqueness: { scope: [:activity_type, :activity_id] }
   validates :activity_type, inclusion: { in: TYPE_CLASS_MAP.values }
-
-  scope :cache_ids, -> { select(:id, :updated_at, :activity_type, :activity_id) }
 
   scope :browserable, ->(exclude_types = []) {
     types = TYPE_CLASS_MAP.values - activity_types_from_types(exclude_types + [:follow_request])
@@ -68,12 +66,16 @@ class Notification < ApplicationRecord
   end
 
   class << self
+    def cache_ids
+      select(:id, :updated_at, :activity_type, :activity_id)
+    end
+
     def reload_stale_associations!(cached_items)
       account_ids = (cached_items.map(&:from_account_id) + cached_items.map { |item| item.target_status&.account_id }.compact).uniq
 
       return if account_ids.empty?
 
-      accounts = Account.where(id: account_ids).map { |a| [a.id, a] }.to_h
+      accounts = Account.where(id: account_ids).includes(:account_stat).each_with_object({}) { |a, h| h[a.id] = a }
 
       cached_items.each do |item|
         item.from_account = accounts[item.from_account_id]

@@ -6,6 +6,7 @@ class InstancePresenter
     :site_contact_email,
     :open_registrations,
     :site_title,
+    :site_short_description,
     :site_description,
     :site_extended_description,
     :site_terms,
@@ -13,15 +14,15 @@ class InstancePresenter
   )
 
   def contact_account
-    Account.find_local(Setting.site_contact_username)
+    Account.find_local(Setting.site_contact_username.gsub(/\A@/, ''))
   end
 
   def user_count
-    Rails.cache.fetch('user_count') { User.confirmed.count }
+    Rails.cache.fetch('user_count') { User.confirmed.joins(:account).merge(Account.without_suspended).count }
   end
 
   def status_count
-    Rails.cache.fetch('local_status_count') { Account.local.sum(:statuses_count) }
+    Rails.cache.fetch('local_status_count') { Account.local.joins(:account_stat).sum('account_stats.statuses_count') }.to_i
   end
 
   def domain_count
@@ -42,5 +43,9 @@ class InstancePresenter
 
   def hero
     @hero ||= Rails.cache.fetch('site_uploads/hero') { SiteUpload.find_by(var: 'hero') }
+  end
+
+  def mascot
+    @mascot ||= Rails.cache.fetch('site_uploads/mascot') { SiteUpload.find_by(var: 'mascot') }
   end
 end

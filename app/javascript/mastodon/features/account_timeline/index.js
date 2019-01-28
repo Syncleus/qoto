@@ -11,6 +11,7 @@ import HeaderContainer from './containers/header_container';
 import ColumnBackButton from '../../components/column_back_button';
 import { List as ImmutableList } from 'immutable';
 import ImmutablePureComponent from 'react-immutable-pure-component';
+import { FormattedMessage } from 'react-intl';
 
 const mapStateToProps = (state, { params: { accountId }, withReplies = false }) => {
   const path = withReplies ? `${accountId}:with_replies` : accountId;
@@ -23,12 +24,13 @@ const mapStateToProps = (state, { params: { accountId }, withReplies = false }) 
   };
 };
 
-@connect(mapStateToProps)
-export default class AccountTimeline extends ImmutablePureComponent {
+export default @connect(mapStateToProps)
+class AccountTimeline extends ImmutablePureComponent {
 
   static propTypes = {
     params: PropTypes.object.isRequired,
     dispatch: PropTypes.func.isRequired,
+    shouldUpdateScroll: PropTypes.func,
     statusIds: ImmutablePropTypes.list,
     featuredStatusIds: ImmutablePropTypes.list,
     isLoading: PropTypes.bool,
@@ -61,7 +63,7 @@ export default class AccountTimeline extends ImmutablePureComponent {
   }
 
   render () {
-    const { statusIds, featuredStatusIds, isLoading, hasMore } = this.props;
+    const { shouldUpdateScroll, statusIds, featuredStatusIds, isLoading, hasMore } = this.props;
 
     if (!statusIds && isLoading) {
       return (
@@ -77,12 +79,15 @@ export default class AccountTimeline extends ImmutablePureComponent {
 
         <StatusList
           prepend={<HeaderContainer accountId={this.props.params.accountId} />}
+          alwaysPrepend
           scrollKey='account_timeline'
           statusIds={statusIds}
           featuredStatusIds={featuredStatusIds}
           isLoading={isLoading}
           hasMore={hasMore}
           onLoadMore={this.handleLoadMore}
+          shouldUpdateScroll={shouldUpdateScroll}
+          emptyMessage={<FormattedMessage id='empty_column.account_timeline' defaultMessage='No toots here!' />}
         />
       </Column>
     );
