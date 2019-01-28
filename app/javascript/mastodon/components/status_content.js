@@ -34,7 +34,7 @@ export default class StatusContent extends React.PureComponent {
       return;
     }
 
-    MathJax.Hub.Queue(['Typeset',MathJax.Hub,node]);
+    //MathJax.Hub.Queue(['Typeset',MathJax.Hub,node]);
 
     const links = node.querySelectorAll('a');
 
